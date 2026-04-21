@@ -1,8 +1,7 @@
 //import { useState } from "react";
 import "./styles/App.css";
-import { Grid } from "./components/pages/Grid";
+import { Grid } from "./components/pages/GridTable";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
 
 const theme = createTheme({
   palette: {
@@ -13,7 +12,6 @@ const theme = createTheme({
 });
 
 function App() {
-  // const [count, setCount] = useState(0);
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -23,20 +21,11 @@ function App() {
           </div>
         </section>
 
-        <section id="direction">
-          <div className="content">
-            <div className="lbl">Direction</div>
-            <div className="ctrl">
-              <TextField defaultValue="0,0 North"></TextField>
-            </div>
-          </div>
-        </section>
-
         <section id="main">
           <Grid />
         </section>
 
-        <section id="footer">:by jordan mendoza</section>
+        <section id="footer">Prepared by: jordan mendoza</section>
       </ThemeProvider>
     </>
   );

@@ -25,3 +25,16 @@ th {
   align-items: center;
   gap: 20px;
 }
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
