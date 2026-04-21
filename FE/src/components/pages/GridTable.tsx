@@ -10,7 +10,7 @@ export function Grid() {
   const defaultDirection = "0,0 North";
   const [input, setInput] = useState(defaultDirection);
 
-  const sizeFive = 5;
+  const sizeFiveLayout = 5;
 
   const { isValid, errors, data } = validateInput(input);
 
@@ -32,25 +32,27 @@ export function Grid() {
                 <div className="left">West</div>
                 <table className="table-grid">
                   <tbody>
-                    {Array.from({ length: sizeFive }).map((_, row) => (
+                    {Array.from({ length: sizeFiveLayout }).map((_, row) => (
                       <tr key={row}>
-                        <td>{sizeFive - 1 - row}</td>
-                        {Array.from({ length: sizeFive }).map((_, col) => (
-                          <td key={col}>
-                            {row === sizeFive - 1 - y && col === x ? (
-                              <span style={{ color: "green" }}>
-                                <Icon />
-                              </span>
-                            ) : (
-                              ""
-                            )}
-                          </td>
-                        ))}
+                        <td>{sizeFiveLayout - 1 - row}</td>
+                        {Array.from({ length: sizeFiveLayout }).map(
+                          (_, col) => (
+                            <td key={col}>
+                              {row === sizeFiveLayout - 1 - y && col === x ? (
+                                <span style={{ color: "green" }}>
+                                  <Icon />
+                                </span>
+                              ) : (
+                                ""
+                              )}
+                            </td>
+                          ),
+                        )}
                       </tr>
                     ))}
                     <tr>
                       <td></td>
-                      {Array.from({ length: sizeFive }).map((_, col) => (
+                      {Array.from({ length: sizeFiveLayout }).map((_, col) => (
                         <td key={`col-${col}`}>{col}</td>
                       ))}
                     </tr>
