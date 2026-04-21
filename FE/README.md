@@ -12,8 +12,9 @@ Set Project current directory to /FE
 Run--> npm install
 Run--> npm install --legacy-peer-deps
 Run--> npm run build
-Run--> npm run storybook
-Run--> npm run dev
+
+***To start the application***
+Run--> npm run dev or Run--> npm run storybook
 
 Prepared by: Jordan Mendoza
 Copyright 2026
