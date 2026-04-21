@@ -5,10 +5,10 @@ import { iconMapDirection } from "../utils/iconMapDirection";
 import { parseDirection } from "../utils/parseDirection";
 import { validateInput } from "../utils/validateInput";
 import { ValidationControl } from "../ValidationControl";
+import type { InputProps } from "./props";
 
-export function Grid() {
-  const defaultDirection = "0,0 North";
-  const [input, setInput] = useState(defaultDirection);
+export function Grid({ initialInput = '' }: InputProps) {
+  const [input, setInput] = useState(initialInput);
 
   const sizeFiveLayout = 5;
 

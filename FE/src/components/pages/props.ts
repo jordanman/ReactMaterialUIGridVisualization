@@ -6,3 +6,7 @@ export interface DirectionMapProps {
   direction: "North" | "South" | "East" | "West";
   icon: ReactNode;
 }
+
+export interface InputProps {
+  initialInput?: string;
+}

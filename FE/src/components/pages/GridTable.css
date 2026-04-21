@@ -38,3 +38,8 @@ th {
   flex-direction: column;
   gap: 20px;
 }
+
+.top,
+.bottom {
+  text-align: center;
+}

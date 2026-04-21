@@ -3,6 +3,15 @@ import type { DirectionMap } from "./constant/directions";
 export function validateInput(input: string) {
   const errors: string[] = [];
 
+  if (!input.trim()) {
+    errors.push("Input cannot be empty.");
+    return {
+      isValid: false,
+      errors,
+      data: { x: 0, y: 0, direction: '' },
+    };
+  }
+
   const [pos, dirRaw] = input.trim().split(" ");
 
   const [xStr, yStr] = pos?.split(",") || [];
