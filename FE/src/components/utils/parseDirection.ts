@@ -1,4 +1,4 @@
-export type Direction = "North" | "South" | "East" | "West";
+import type { DirectionMap } from "./constant/directions";
 
 export function parseDirection(value: string) {
   const [pos, dirRaw = "North"] = value.trim().split(" ");
@@ -9,6 +9,6 @@ export function parseDirection(value: string) {
   return {
     x,
     y,
-    direction: dir as Direction,
+    direction: dir as DirectionMap,
   };
 }

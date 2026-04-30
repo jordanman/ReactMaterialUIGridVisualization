@@ -7,18 +7,17 @@ import { validateInput } from "../utils/validateInput";
 import { ValidationControl } from "../ValidationControl";
 import type { InputProps } from "./props";
 
-export function Grid({ initialInput = '' }: InputProps) {
+export function Grid({ initialInput = "" }: InputProps) {
   const [input, setInput] = useState(initialInput);
 
   const sizeFiveLayout = 5;
 
-  const { isValid, errors, data } = validateInput(input);
+  const { isValid, errors } = validateInput(input);
 
   const { x, y, direction } = parseDirection(input);
 
   const Icon = iconMapDirection[direction];
 
-  console.log(data);
   return (
     <>
       <div className="container">
